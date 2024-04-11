@@ -8,19 +8,19 @@
     "**/.client/**/*.tsx"
   ],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "lib": ["DOM", "DOM.Iterable", "esnext"],
     "types": [
       "@remix-run/cloudflare",
       "vite/client",
-      "@cloudflare/workers-types/2023-07-01"
+      "@cloudflare/workers-types"
     ],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "module": "ESNext",
+    "module": "esnext",
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
-    "target": "ES2022",
+    "target": "esnext",
     "strict": true,
     "allowJs": true,
     "skipLibCheck": true,
