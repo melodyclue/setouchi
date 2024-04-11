@@ -11,6 +11,17 @@ export const links = () => {
   return [
     { rel: "stylesheet", href: "https://rsms.me/inter/inter.css" },
     { rel: "stylesheet", href: styles },
+    {
+      rel: "alternate icon",
+      type: "image/png",
+      href: "/favicons/favicon-32x32.png",
+    },
+    { rel: "apple-touch-icon", href: "/favicons/apple-touch-icon.png" },
+    {
+      rel: "manifest",
+      href: "/site.webmanifest",
+      crossOrigin: "use-credentials",
+    } as const,
   ];
 };
 
