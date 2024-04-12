@@ -47,7 +47,7 @@ export const Profile = () => {
           <h1 className="mt-1 mb-2 text-4xl font-bold text-slate-800">
             {siteConfig.creator}
           </h1>
-          <p className="text-md font-light text-slate-500">{siteConfig.bio}</p>
+          <p className="text-md text-slate-500">{siteConfig.bio}</p>
         </div>
       </div>
     </div>

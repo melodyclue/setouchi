@@ -169,7 +169,7 @@ const items: ItemProps[] = [
           title: "SHOWROOM",
           icon: "paper-plane",
           link: "https://www.showroom-live.com/r/48_SHINANO_SORAHA",
-          username: "@soraha_stu48",
+          username: "@48_SHINANO_SORAHA",
           buttonTitle: "Follower",
           buttonSecondaryText: "14k",
           color: "#9ED2BE",

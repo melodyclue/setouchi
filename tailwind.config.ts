@@ -10,7 +10,7 @@ export default {
         "span-half": "span 0.5 / span 0.5",
       },
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter var", "Noto Sans JP", ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
         card: "0 3px 5px rgba(0,0,0,.05)",

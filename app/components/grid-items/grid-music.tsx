@@ -63,7 +63,7 @@ const MusicGrid = React.forwardRef<HTMLDivElement, EnhancedMusicGridProps>(
               {item.songs?.map((song) => {
                 return (
                   <span
-                    className="px-2 py-0.5 text-sm font-medium rounded-lg text-slate-500 hover:text-slate-700 transition-all"
+                    className="px-2 py-0.5 text-sm font-normal text-slate-500/90 rounded-lg hover:text-slate-700 transition-all"
                     key={song.link}
                   >
                     {song.title}

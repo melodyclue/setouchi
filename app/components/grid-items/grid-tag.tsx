@@ -51,7 +51,7 @@ const TagGrid = React.forwardRef<HTMLDivElement, EnhancedTagGridProps>(
             {item.tags?.map((tag) => {
               return (
                 <span
-                  className="px-1 py-0.5 text-sm font-medium rounded-lg text-slate-500 hover:text-slate-700 transition-all"
+                  className="px-1 py-0.5 text-sm font-normal text-slate-500/90 rounded-lg hover:text-slate-700 transition-all"
                   key={tag.title}
                 >
                   {tag.title}

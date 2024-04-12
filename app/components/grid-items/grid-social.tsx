@@ -69,7 +69,7 @@ const SocialGrid = React.forwardRef<HTMLDivElement, EnhancedSocialGridProps>(
             </div>
             <div className="text-sm text-foreground/55">{item.username}</div>
             {item.description && (
-              <div className="mt-2 text-sm text-slate-500 break-words whitespace-pre-wrap leading-6">
+              <div className="mt-2 font-normal text-sm text-slate-500/90 break-words whitespace-pre-wrap leading-6">
                 {item.description}
               </div>
             )}
