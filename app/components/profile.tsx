@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const siteConfig = {
   title: "STU48 3rd Draft",
   creator: "Shinano Soraha",
-  bio: "兵庫県出身／剣道三段／#宙通信／#宙花カメラ 🍜",
+  bio: "兵庫県出身／剣道三段／#宙通信",
 };
 
 export const Profile = () => {
