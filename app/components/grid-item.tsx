@@ -2,6 +2,17 @@ import { cn } from "#app/utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 import { motion } from "framer-motion";
 
+export type SizeVariant =
+  | "1x1"
+  | "1x2"
+  | "1x3"
+  | "2x1"
+  | "2x2"
+  | "2x3"
+  | "4x2"
+  | "6x6"
+  | "4x3";
+
 const variants = cva(
   "shadow-grid rounded-3xl bg-white dark:bg-neutral-900 overflow-hidden",
   {
@@ -29,7 +40,11 @@ export interface EnhancedGridItemProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof variants> {}
 
-export const GridItem = ({ size, children }: EnhancedGridItemProps) => {
+export const GridItem = ({
+  size,
+  children,
+  ...props
+}: EnhancedGridItemProps) => {
   return (
     <motion.div
       data-size={size}
@@ -42,7 +57,7 @@ export const GridItem = ({ size, children }: EnhancedGridItemProps) => {
         variants({
           size,
           className:
-            "hover:bg-slate-50/90 duration-75 transition-colors ease-in-out container shadow-card border border-secondary/5",
+            "transition-colors ease-in-out container shadow-card border border-secondary/5",
         })
       )}
     >

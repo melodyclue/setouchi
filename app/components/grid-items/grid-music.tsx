@@ -43,28 +43,36 @@ const MusicGrid = React.forwardRef<HTMLDivElement, EnhancedMusicGridProps>(
     const item = props.item;
     return (
       <div className={cn(buttonVariants({ className }))} ref={ref} {...props}>
-        <div className="flex items-center justify-between">
-          {item.icon && <Icon type={item.icon} color={item.color ?? "#fff"} />}
-        </div>
+        <Link
+          to={item.link}
+          className="h-full w-full p-6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="flex items-center justify-between">
+            {item.icon && (
+              <Icon type={item.icon} color={item.color ?? "#fff"} />
+            )}
+          </div>
 
-        <div className="mt-2">
-          <div className="font-semibold line-clamp-1 text-foreground/85">
-            {item.title}
+          <div className="mt-2">
+            <div className="font-semibold line-clamp-1 text-foreground/85">
+              {item.title}
+            </div>
+            <div className="flex flex-wrap gap-1 mt-2">
+              {item.songs?.map((song) => {
+                return (
+                  <span
+                    className="px-2 py-0.5 text-sm font-medium rounded-lg text-slate-500 hover:text-slate-700 transition-all"
+                    key={song.link}
+                  >
+                    {song.title}
+                  </span>
+                );
+              })}
+            </div>
           </div>
-          <div className="flex flex-wrap gap-1 mt-2">
-            {item.songs?.map((song) => {
-              return (
-                <Link
-                  className="px-2 py-0.5 text-sm font-medium rounded-lg text-slate-500 hover:text-slate-700 transition-all"
-                  key={song.link}
-                  to={song.link}
-                >
-                  {song.title}
-                </Link>
-              );
-            })}
-          </div>
-        </div>
+        </Link>
       </div>
     );
   }

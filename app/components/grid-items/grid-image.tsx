@@ -35,7 +35,12 @@ const ImageGrid = React.forwardRef<HTMLDivElement, EnhancedImageGridProps>(
     return (
       <div className={cn(buttonVariants({ className }))} ref={ref} {...props}>
         <div className="w-full h-full flex flex-col items-end justify-end overflow-hidden rounded-3xl relative">
-          <a href={item.link} className="w-full h-full">
+          <a
+            href={item.link}
+            className="w-full h-full"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               className="z-0 object-cover object-center w-full h-full"
               src={item.image ?? ""}

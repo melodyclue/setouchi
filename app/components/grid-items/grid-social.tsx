@@ -10,8 +10,6 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-white text-primary-foreground",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
@@ -48,8 +46,13 @@ const SocialGrid = React.forwardRef<HTMLDivElement, EnhancedSocialGridProps>(
     const item = props.item;
 
     return (
-      <div className={cn(buttonVariants({ className }))} ref={ref} {...props}>
-        <Link to={item.link} className="h-full w-full p-4 sm:p-6">
+      <div className={cn(buttonVariants({ className }))} {...props}>
+        <Link
+          to={item.link}
+          className="h-full w-full p-6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="flex items-center justify-between">
             {item.icon && (
               <Icon
@@ -66,7 +69,7 @@ const SocialGrid = React.forwardRef<HTMLDivElement, EnhancedSocialGridProps>(
             </div>
             <div className="text-sm text-foreground/55">{item.username}</div>
             {item.description && (
-              <div className="mt-2 text-sm text-slate-500 break-words whitespace-pre-wrap">
+              <div className="mt-2 text-sm text-slate-500 break-words whitespace-pre-wrap leading-6">
                 {item.description}
               </div>
             )}

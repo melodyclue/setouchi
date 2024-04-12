@@ -1,25 +1,44 @@
+import { Dialog, DialogContent, DialogTrigger } from "#app/components/dialog";
+import { motion } from "framer-motion";
+
 export const siteConfig = {
-  title: "STU48 Draft 3rd",
+  title: "STU48 3rd Draft",
   creator: "Shinano Soraha",
   bio: "兵庫県出身／剣道三段／#宙通信／#宙花カメラ 🍜",
 };
 
 export const Profile = () => {
   return (
-    <div
-      key="left-panel"
-      className="flex flex-col justify-between py-6 xl:max-w-sm xl:py-10 xl:h-full"
-    >
+    <div className="flex flex-col justify-between py-6 xl:max-w-sm xl:py-10 xl:h-full">
       <div>
-        <div className="rounded-full w-[120px] h-[120px] overflow-hidden">
-          <img
-            loading="eager"
-            alt="avatar"
-            src="/soraha_miker.png"
-            width={120}
-            height={120}
-          />
-        </div>
+        <Dialog>
+          <DialogTrigger asChild>
+            <div className="rounded-full w-[120px] h-[120px] overflow-hidden shadow-grid cursor-pointer">
+              <img
+                loading="eager"
+                alt="avatar"
+                src="/soraha_miker.png"
+                width={120}
+                height={120}
+              />
+            </div>
+          </DialogTrigger>
+          <DialogContent asChild>
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+            >
+              <img
+                src="https://pub-a79cd0c59dcd43fcbf1a223d0657d4ed.r2.dev/soraha_stu48_qr.png"
+                alt=""
+              />
+            </motion.div>
+          </DialogContent>
+        </Dialog>
 
         <div className="mt-6">
           <div className="text-sm font-medium text-slate-500">
