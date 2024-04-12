@@ -33,7 +33,7 @@ export const Profile = () => {
               }}
             >
               <img
-                src="https://pub-a79cd0c59dcd43fcbf1a223d0657d4ed.r2.dev/soraha_stu48_qr.png"
+                src="https://image.routepia.com/soraha_stu48_qr.png"
                 alt=""
               />
             </motion.div>

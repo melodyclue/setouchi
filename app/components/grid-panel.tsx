@@ -105,8 +105,7 @@ const items: ItemProps[] = [
       <ImageGrid
         className="h-full flex flex-col gap-2"
         item={{
-          image:
-            "https://pub-a79cd0c59dcd43fcbf1a223d0657d4ed.r2.dev/soraha.jpeg",
+          image: "https://image.routepia.com/soraha.jpeg",
           link: "https://x.com/soraha_stu48/status/1777652720398188979",
         }}
       />

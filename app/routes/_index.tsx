@@ -19,8 +19,7 @@ export const meta: MetaFunction = () => {
     },
     {
       property: "og:image",
-      content:
-        "https://pub-a79cd0c59dcd43fcbf1a223d0657d4ed.r2.dev/soraha_miker.png",
+      content: "https://image.routepia.com/soraha_miker.png",
     },
     {
       property: "og:url",
