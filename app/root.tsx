@@ -43,6 +43,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        {/* Cloudflare Web Analytics  */}
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "9649bd3223b54524b66da7eb406e57bc"}'
+        ></script>
+        {/* End Cloudflare Web Analytics  */}
       </head>
       <body>
         <div className="flex flex-col min-h-min bg-gradient-to-r from-emerald-100/20 to-rose-200/30">
