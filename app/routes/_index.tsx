@@ -1,3 +1,4 @@
+import { CelebrateBanner } from "#app/components/celebrate-banner.js";
 import { GridField } from "#app/components/grid-panel.js";
 import { Profile } from "#app/components/profile.js";
 import type { MetaFunction } from "@remix-run/node";
@@ -49,6 +50,7 @@ export default function Index() {
     <main className="relative flex flex-col items-center flex-1 w-full h-full">
       <div className="container relative z-20 flex flex-col w-full h-full px-4 sm:px-6 gap:6 xl:gap-16 xl:flex-row">
         <Profile />
+        <CelebrateBanner />
         <GridField />
       </div>
     </main>

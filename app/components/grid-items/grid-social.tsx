@@ -4,8 +4,8 @@ import { cva } from "class-variance-authority";
 import { cn } from "#app/utils/cn";
 import { Link } from "@remix-run/react";
 
-const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
+const socialVariants = cva(
+  "whitespace-nowrap font-medium transition-colors focus-visible:outline-none",
   {
     variants: {
       variant: {
@@ -46,10 +46,10 @@ const SocialGrid = React.forwardRef<HTMLDivElement, EnhancedSocialGridProps>(
     const item = props.item;
 
     return (
-      <div className={cn(buttonVariants({ className }))} {...props}>
+      <div className={cn(socialVariants({ className }))} {...props} {...ref}>
         <Link
           to={item.link}
-          className="h-full w-full p-6"
+          className="p-6 inline-block"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -84,4 +84,4 @@ const SocialGrid = React.forwardRef<HTMLDivElement, EnhancedSocialGridProps>(
 
 SocialGrid.displayName = "SocialGrid";
 
-export { SocialGrid, buttonVariants };
+export { SocialGrid, socialVariants };

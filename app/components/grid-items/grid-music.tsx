@@ -4,7 +4,7 @@ import { Icon } from "../icon";
 import { Link } from "@remix-run/react";
 import { cn } from "#app/utils/cn";
 
-const buttonVariants = cva(
+const musicVariants = cva(
   "whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
@@ -42,7 +42,7 @@ const MusicGrid = React.forwardRef<HTMLDivElement, EnhancedMusicGridProps>(
   ({ className, ...props }, ref) => {
     const item = props.item;
     return (
-      <div className={cn(buttonVariants({ className }))} ref={ref} {...props}>
+      <div className={cn(musicVariants({ className }))} ref={ref} {...props}>
         <Link
           to={item.link}
           className="h-full w-full p-6"
@@ -80,4 +80,4 @@ const MusicGrid = React.forwardRef<HTMLDivElement, EnhancedMusicGridProps>(
 
 MusicGrid.displayName = "MusicGrid";
 
-export { MusicGrid, buttonVariants };
+export { MusicGrid, musicVariants };

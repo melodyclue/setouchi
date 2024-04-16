@@ -28,7 +28,7 @@ export const GridField = () => {
           stiffness: 330,
           damping: 35,
           delay: staggerGridItems,
-        }
+        },
       );
     }
   }, [animate, scope, staggerGridItems]);
@@ -36,9 +36,9 @@ export const GridField = () => {
   return (
     <div
       ref={scope}
-      className="container mx-auto grid grid-cols-4 md:grid-cols-8 xl:grid-cols-12
-     grid-rows-8 md:grid-rows-4 xl:grid-rows-3 gap-4 md:gap-6 xl:gap-6
-     mb-8 md:min-h-[50rem] lg:min-h-[50rem] lg:mb-10 xl:min-h-[50rem] xl:pt-8 "
+      className="container mx-auto mb-8 grid grid-cols-4 grid-rows-8
+     gap-4 md:min-h-[50rem] md:grid-cols-8 md:grid-rows-4 md:gap-6 lg:mb-10
+     lg:min-h-[50rem] xl:min-h-[50rem] xl:grid-cols-12 xl:grid-rows-3 xl:gap-6 xl:pt-8 "
     >
       {items.map(({ component, key, size }, index) => (
         <GridItem key={key} size={size}>
@@ -57,11 +57,11 @@ type ItemProps = {
 
 const items: ItemProps[] = [
   {
-    size: "2x1",
+    size: "4x1",
     key: "twitter",
     component: (
       <SocialGrid
-        className="h-full flex flex-col gap-2 bg-twitter/5"
+        className="h-full bg-twitter/5"
         item={{
           title: "Twitter",
           icon: "twitter",
@@ -78,11 +78,11 @@ const items: ItemProps[] = [
   },
 
   {
-    size: "2x1",
+    size: "4x1",
     key: "instagram",
     component: (
       <SocialGrid
-        className="h-full flex flex-col gap-2 bg-instagram/5"
+        className="h-full bg-instagram/5"
         item={{
           title: "Instagram",
           icon: "instagram",
@@ -103,7 +103,7 @@ const items: ItemProps[] = [
     key: "image",
     component: (
       <ImageGrid
-        className="h-full flex flex-col gap-2"
+        className="flex h-full flex-col"
         item={{
           image: "https://image.routepia.com/soraha.jpeg",
           link: "https://x.com/soraha_stu48/status/1777652720398188979",
@@ -112,11 +112,12 @@ const items: ItemProps[] = [
     ),
   },
   {
-    size: "2x1",
+    size: "4x1",
     key: "tag",
     component: (
       <TagGrid
-        className="h-full w-full p-6"
+        variant="outline"
+        link="https://sp.stu48.com/feature/shinano_soraha_fs"
         item={{
           title: "信濃 宙花（しなの そらは）",
           icon: "magic-wnad",
@@ -124,35 +125,30 @@ const items: ItemProps[] = [
           tags: [
             {
               title: "#そらは",
-              color: "#FF6868",
             },
             {
               title: "#2003年8月9日生まれ",
-              color: "#FF6868",
             },
             {
               title: "#獅子座",
-              color: "#FF6868",
             },
             {
               title: "#A型",
-              color: "#FF6868",
             },
             {
               title: "#赤×緑",
-              color: "#FF6868",
+            },
+            {
+              title: "#MiKER!リーダー",
             },
             {
               title: "#カメラ",
-              color: "#FF6868",
             },
             {
               title: "#ラーメン",
-              color: "#FF6868",
             },
             {
               title: "#名探偵コナン",
-              color: "#FF6868",
             },
           ],
         }}
@@ -160,11 +156,10 @@ const items: ItemProps[] = [
     ),
   },
   {
-    size: "2x1",
+    size: "4x1",
     key: "showroom",
     component: (
       <SocialGrid
-        className="h-full flex flex-col gap-2"
         item={{
           title: "SHOWROOM",
           icon: "paper-plane",
@@ -180,13 +175,13 @@ const items: ItemProps[] = [
     ),
   },
   {
-    size: "2x1",
+    size: "4x1",
     key: "music",
     component: (
       <MusicGrid
-        className="h-full flex flex-col gap-2"
+        className="flex h-full flex-col gap-2"
         item={{
-          layout: "2x1",
+          layout: "4x1",
           title: "Music",
           icon: "play",
           link: "https://open.spotify.com/playlist/4FMc7sIHoH04kAanmQaUCe?si=84b1fe019f44474e",

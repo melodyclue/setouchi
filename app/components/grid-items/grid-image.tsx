@@ -2,8 +2,8 @@ import { cn } from "#app/utils/cn.js";
 import { cva } from "class-variance-authority";
 import React from "react";
 
-const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
+const imageVariantts = cva(
+  " whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -33,7 +33,7 @@ const ImageGrid = React.forwardRef<HTMLDivElement, EnhancedImageGridProps>(
     const item = props.item;
 
     return (
-      <div className={cn(buttonVariants({ className }))} ref={ref} {...props}>
+      <div className={cn(imageVariantts({ className }))} ref={ref} {...props}>
         <div className="w-full h-full flex flex-col items-end justify-end overflow-hidden rounded-3xl relative">
           <a
             href={item.link}
@@ -55,4 +55,4 @@ const ImageGrid = React.forwardRef<HTMLDivElement, EnhancedImageGridProps>(
 
 ImageGrid.displayName = "ImageGrid";
 
-export { ImageGrid, buttonVariants };
+export { ImageGrid, imageVariantts };
