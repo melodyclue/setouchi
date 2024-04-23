@@ -4,13 +4,13 @@ export const CelebrateBanner = () => {
   return (
     <Link
       to="https://sp.stu48.com/news/detail/17793"
-      className="z-20 flex flex-col w-full h-full mb-8"
+      className="z-20 mb-8 flex h-full w-full flex-col xl:hidden"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="shadow-grid bg-white/40 overflow-hidden rounded-3xl">
-        <div className="text-slate-800 px-6 md:px-10 py-3">
-          <div className="flex items-streach">
+      <div className="overflow-hidden rounded-3xl bg-white/40 shadow-grid">
+        <div className="px-6 py-3 text-slate-800 md:px-10">
+          <div className="items-streach flex">
             <div className="text-sm">
               <h1>祝MiKERリーダー就任おめでとう🎉</h1>
             </div>
