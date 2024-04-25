@@ -3,23 +3,6 @@ import { cn } from "#app/utils/cn";
 export const Icons: {
   [key: string]: JSX.Element;
 } = {
-  youtube: (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 28 25"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g id="fa6-brands:youtube">
-        <path
-          id="Vector"
-          d="M26.7194 6.05874C26.414 4.90396 25.5144 3.99448 24.3722 3.68584C22.3019 3.125 14 3.125 14 3.125C14 3.125 5.69821 3.125 3.62781 3.68584C2.4856 3.99453 1.586 4.90396 1.28067 6.05874C0.725922 8.15186 0.725922 12.5189 0.725922 12.5189C0.725922 12.5189 0.725922 16.886 1.28067 18.9792C1.586 20.1339 2.4856 21.0055 3.62781 21.3142C5.69821 21.875 14 21.875 14 21.875C14 21.875 22.3018 21.875 24.3722 21.3142C25.5144 21.0055 26.414 20.1339 26.7194 18.9792C27.2741 16.886 27.2741 12.5189 27.2741 12.5189C27.2741 12.5189 27.2741 8.15186 26.7194 6.05874ZM11.2848 16.4839V8.55395L18.2235 12.519L11.2848 16.4839Z"
-          fill="white"
-        />
-      </g>
-    </svg>
-  ),
   twitter: (
     <svg
       width="20"
@@ -135,7 +118,7 @@ export const Icon = ({
       }}
       className={cn(
         className,
-        "w-10 h-10 flex items-center justify-center rounded-lg shadow-grid shrink-0"
+        "flex h-10 w-10 shrink-0 items-center justify-center rounded-lg shadow-grid",
       )}
       {...props}
     >

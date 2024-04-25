@@ -9,11 +9,11 @@ export const siteConfig = {
 
 export const Profile = () => {
   return (
-    <div className="flex flex-col justify-between py-6 xl:max-w-sm xl:py-10 xl:h-full">
+    <div className="flex flex-col justify-between py-6 xl:h-full xl:max-w-sm xl:py-10">
       <div>
         <Dialog>
           <DialogTrigger asChild>
-            <div className="rounded-full w-[120px] h-[120px] overflow-hidden shadow-grid cursor-pointer">
+            <div className="h-[120px] w-[120px] cursor-pointer overflow-hidden rounded-full shadow-grid">
               <img
                 loading="eager"
                 alt="avatar"
@@ -44,7 +44,7 @@ export const Profile = () => {
           <div className="text-sm font-medium text-slate-500">
             {siteConfig.title}
           </div>
-          <h1 className="mt-1 mb-2 text-4xl font-bold text-slate-800">
+          <h1 className="mb-2 mt-1 text-4xl font-bold text-slate-800">
             {siteConfig.creator}
           </h1>
           <p className="text-md text-slate-500">{siteConfig.bio}</p>

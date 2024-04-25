@@ -1,5 +1,3 @@
-"use client";
-
 import { stagger, useAnimate } from "framer-motion";
 import { useEffect } from "react";
 import { SocialGrid } from "./grid-items/grid-social";
@@ -19,8 +17,8 @@ export const GridField = () => {
       animate(
         "div",
         {
-          scale: 1,
-          y: 0,
+          // scale: 1,
+          // y: 0,
           opacity: 1,
         },
         {

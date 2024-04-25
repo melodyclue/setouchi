@@ -26,8 +26,8 @@ export const GridItem = ({ size, children }: EnhancedGridItemProps) => {
     <motion.div
       data-size={size}
       initial={{
-        scale: 0.9,
-        y: 50,
+        // scale: 0.9,
+        // y: 50,
         opacity: 0,
       }}
       className={cn(
